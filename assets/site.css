@@ -114,3 +114,27 @@ body{color:var(--ink)}.topbar{background:#14372e}.topbar svg{color:#d9b757}.nav-
 @media(max-width:1180px){.brand,.brand img{width:210px;max-width:210px;flex-basis:auto}}
 @media(max-width:600px){.brand,.brand img{width:188px;max-width:188px}}
 @media(max-width:370px){.brand,.brand img{width:170px;max-width:170px}}
+
+/* Nontobeko Nkabinde: supplied enhanced photo — proportions remain natural, cropped intentionally. */
+.intro-picture > img[src*="nontobeko-director-clear"] {
+  aspect-ratio: 4 / 4.6;
+  width:100%; height:auto; object-fit:cover; object-position:center 13%;
+}
+.profile-photo > img[src*="nontobeko-director-clear"] {
+  aspect-ratio:3 / 4;
+  width:100%; height:auto; object-fit:cover; object-position:center 12%;
+}
+@media (max-width:600px) {
+ .intro-picture > img[src*="nontobeko-director-clear"] { aspect-ratio:4 / 5; object-position:center 12%; }
+ .profile-photo > img[src*="nontobeko-director-clear"] { aspect-ratio:3 / 4; object-position:center 12%; }
+}
+
+/* Final layout: avoid clipping the branded artwork partway through on the homepage. */
+.intro-picture > img[src*="nontobeko-director-clear"] { aspect-ratio:1 / 1.08; object-position:center top; }
+/* Full supplied photograph, including its existing branding, is displayed on the director profile. */
+.profile-photo { max-width:410px; }
+.profile-photo > img[src*="nontobeko-director-clear"] { aspect-ratio:auto; height:auto; object-fit:contain; object-position:center top; }
+@media (max-width:600px){
+ .intro-picture > img[src*="nontobeko-director-clear"] { aspect-ratio:1 / 1.08; object-position:center top; }
+ .profile-photo { max-width:100%; }
+}
