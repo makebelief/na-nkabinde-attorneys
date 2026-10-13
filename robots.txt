@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Independent preview: indexing can be enabled only after the firm approves this website.
